@@ -13,8 +13,8 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('/', "IndexController@Index");
+    Route::post('/add_product', "IndexController@AddProduct");
+    Route::get('/get_all', 'IndexController@GetAll');
 
 });
